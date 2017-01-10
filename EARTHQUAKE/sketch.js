@@ -22,10 +22,10 @@ function setup(){
 
 function draw(){
      background(204);
-    // if ( stato == "cover"){
+    // if ( stato1 == "cover"){
     // vedere imagine con text
 //}
-    // else if ( stato == "shake"){
+    // else if ( stato2 == "shake"){
     
     deviceShaken();
     //CREATE THE ELLIPSE AREA
@@ -45,7 +45,7 @@ function draw(){
         dots[i].move();
         dots[i]. display();
     }
-//} else if(stato == "release"){
+//} else if(stato3 == "release"){
     
  // touches[random(width/1.9,width/2.1),random(height/1, height/1.2)];
     textSize(22);
