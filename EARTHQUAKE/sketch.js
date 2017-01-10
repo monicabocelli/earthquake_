@@ -3,6 +3,10 @@ var dots = [];
 var value = 150;  //starting value of earthquake
 
 //var img;
+
+var stato1 = "cover"
+var stato2 = "shake"
+var stato3 = "release"
     
 
 function setup(){
@@ -17,25 +21,13 @@ function setup(){
 }
 
 function draw(){
-    background(204);
+     background(204);
+    // if ( stato == "cover"){
+    // vedere imagine con text
+//}
+    // else if ( stato == "shake"){
     
- // touches[random(width/1.9,width/2.1),random(height/1, height/1.2)];
-    textSize(22);
-    text('SEE RESULTS', width/2, height/1.1);
-    
-    
-   //MAGNITUDE TEXT 
-    textFont('Inconsolata');
-    textSize(12);
-    textAlign(CENTER);
-    textStyle(NORMAL);
-    text("Magnitude", width - width/6, height/3.5);
-    textSize(32);
-    textAlign(CENTER);
-    textStyle(BOLD);
-    text(value, width - width/6, height/3);
-    
-    
+    deviceShaken();
     //CREATE THE ELLIPSE AREA
     var x = width/2;
     var y = height/2;
@@ -53,12 +45,35 @@ function draw(){
         dots[i].move();
         dots[i]. display();
     }
+//} else if(stato == "release"){
+    
+ // touches[random(width/1.9,width/2.1),random(height/1, height/1.2)];
+    textSize(22);
+    text('SEE RESULTS', width/2, height/1.1);
+     
+    //*****primo compito, come fare il click-->> arrivare a info---> it depends on the grade of the earthquake
+    //If --> depends
+    //***** compito due: recoplare la info, e anche fare le imagini, y fare la scala di grade di earthquake
+    
+   //MAGNITUDE TEXT 
+    textFont('Inconsolata');
+    textSize(12);
+    textAlign(CENTER);
+    textStyle(NORMAL);
+    text("Magnitude", width - width/6, height/3.5);
+    textSize(32);
+    textAlign(CENTER);
+    textStyle(BOLD);
+    text(value, width - width/6, height/3);
+    
+}
+   // il click to TRY AGAIN
     
 }
 
 /*
 function deviceShaken(){
-        
+    QuakeDots();    
     value = (accelerationX * accelerationY * accelerationZ)/3;
     magnitude = map(value, 30, 1000, 0, 10);
     
@@ -85,6 +100,7 @@ this.display = function(){
     ellipse(this.xdot, this.ydot, this.diameter, this.diameter);
 };
 
+///////////
     
 /*    
 function touchStarted(){
